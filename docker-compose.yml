@@ -1,0 +1,14 @@
+errbit:
+  image: griff/errbit
+  container_name: errbit
+  links:
+    - mongodb:mongodb
+  ports:
+    - 3000:3000
+
+mongodb:
+ image: mongo
+ container_name: mongodb
+ volumes:
+    - /mongo-data:/data/db
+    
